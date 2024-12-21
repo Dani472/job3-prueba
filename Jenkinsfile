@@ -1,23 +1,10 @@
-
 pipeline {
-  agent any
-  stages { 
-    stage('Setup') {
+  agent
+  stages {
+    stage ('Initialize') {
       steps {
-        echo 'Configuracion del proyecto'
+        echo 'Placeholder.'
       }
     }
-    stage('Unit Testing') {
-        script {
-          sh """
-          python -m unittest discover -v -s test
-          """
-        }
-      }
-    }
-    stage('Integration Testing') {
-      steps {
-        echo 'prueba'
-    }
-  }  
+  }
 }
